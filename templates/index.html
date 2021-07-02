@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Credit Card prediction</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Credit Card prediction</span></h2>
+            <div class='description'>
+    			<p>THIS data set from analytic vidya Job-A-Thon competiton i have created and depoyed in cloud end to end</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <select name="Gender" id="Gender" required="required">
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                
+                </select>
+                
+                <br>
+                <br>
+                <br>
+                
+                <input id="Age" name="Age" required="required" placeholder="Eg : 18 or 46 or 23" >
+                
+                <br>
+                <br>
+                <br>
+                
+                <input id="Region_Code" name="Region_Code" required="required" placeholder="Eg : 234 or 123 324" >
+                
+                <br>
+                <br>
+                <br>
+                
+                <select name="Occupation" id="Occupation" required="required">
+                                <option value="Salaried">Salaried</option>
+                                <option value="Self_Employed">Self_Employed</option>
+                                <option value="Other">Other</option>
+                                
+                </select>
+                
+                <br>
+                <br>
+                <br>
+                
+                
+                <input id="Channel_Code" name="Channel_Code" required="required" placeholder="Eg : 1 or 2 or 3" >
+                
+                <br>
+                <br>
+                <br>
+                
+                <input id="Vintage" name="Vintage" required="required" placeholder="Eg : 20 or 35 or 12" >
+                
+                <br>
+                <br>
+                <br>
+                
+                <select name="Credit_Product" id="Credit_Product" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="Male">No</option>
+                                
+                                
+                </select>
+                
+                <br>
+                <br>
+                <br>
+                
+                <input id="Avg_Account_Balance" name="Avg_Account_Balance" required="required" placeholder="Eg : 12545 or 15422" >
+                
+                <br>
+                <br>
+                <br>
+                
+                <select name="Is_Active" id="Is_Active" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">NO</option>
+                                
+                                
+                                
+                </select>
+                
+                <br>
+                <br>
+                <br>
+                
+                
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+
+
+    </body>
+</html>
